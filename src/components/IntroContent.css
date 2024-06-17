@@ -1,0 +1,76 @@
+.intro_content {
+    height: 120vh;
+    background-color: rgb(17, 17, 24);
+}
+
+.intro_content .top_content {
+    padding: 0px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    height: 75vh;
+}
+
+.title {
+    display: grid;
+    text-align: center;
+    z-index: 2;
+}
+
+.title .main {
+    font-size: 80px;
+    color: white;
+    font-weight: 100;
+}
+
+.title .description {
+    font-size: 50px;
+    color: white;
+    font-weight: 300;
+}
+
+/* bottom content */
+
+.bottom_content {
+    height: 40vh;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header::before,
+.header::after {
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 0.1px;
+    background-color: rgb(98, 98, 98);
+    margin: 0px 10px;
+}
+
+.header span {
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.project_container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.project {
+    height: 200px;
+    width: 350px;
+    background-color: rgb(213, 213, 213);
+}

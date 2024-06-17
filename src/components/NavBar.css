@@ -1,0 +1,65 @@
+.nav_container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: #1f1f27;
+}
+
+/* left */
+
+.left {
+    display: flex;
+    float: left;
+}
+
+.logo {
+    height: 70px;
+    margin-left: 20px;
+}
+
+/* center */
+
+.center {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.center span {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.center span:hover {
+    color: #32eecc;
+    transition: 300ms;
+}
+
+/* right */
+
+.right {
+    display: flex;
+    position: absolute;
+    right: 30px;
+    gap: 8px;
+}
+
+.right .linkedin {
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.right .github {
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    margin: 0;
+    border-radius: 20px;
+}
