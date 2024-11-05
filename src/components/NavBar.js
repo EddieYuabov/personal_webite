@@ -10,11 +10,11 @@ const NavBar = () => {
                 <img src={logo} alt="logo" className="logo"/>
             </div>
             <div className="center">
-                <Link to="/"><span>Home</span></Link>
-                <Link to="/About"><span>About</span></Link>
-                <Link to="/Services"><span>Sevices</span></Link>
-                <Link to="/Work"><span>Work</span></Link>
-                <Link to="/Contact"><span>Contact</span></Link>
+                <Link to="/"><span>home.</span></Link>
+                <Link to="/About"><span>about.</span></Link>
+                <Link to="/Services"><span>sevices.</span></Link>
+                <Link to="/Work"><span>work.</span></Link>
+                <Link to="/Contact"><span>contact.</span></Link>
             </div>
             <div className="right">
                 <LinkedinIcon className="linkedin" onClick={() => window.open("https://www.linkedin.com/in/edward-yuabov/", "_blank")}/>

@@ -28,6 +28,10 @@
     width: 100%;
 }
 
+.center a {
+    text-decoration: none;
+}
+
 .center span {
     color: white;
     font-size: 20px;
