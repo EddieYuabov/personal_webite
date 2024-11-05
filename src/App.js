@@ -1,7 +1,9 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import IntroContent from './components/IntroContent';
 import Loading from './components/Loading';
 import NavBar from './components/NavBar';
+import About from './pages/About';
 
 const ChatBot = () => {
   return(
@@ -11,13 +13,20 @@ const ChatBot = () => {
   )
 }
 
+const navOptions = ["Home", "About", "Services", "Work", "Contact"]
+
 function App() {
   return (
-    <div className="content">
-      <NavBar/>
-      <IntroContent/> 
-      {/* <ChatBot/> */}
-    </div>
+    <Router>
+      <div className="content">
+        <NavBar/>
+        <Routes>
+        <Route path="/" element={<IntroContent/> }/>
+        <Route path="/About" element={<About/> }/>
+        {/* <ChatBot/> */}
+        </Routes>
+      </div>
+    </Router>
   )
 }
 

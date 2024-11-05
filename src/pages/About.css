@@ -1,0 +1,32 @@
+.about {
+    height: 100vh;
+}
+
+.about .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+
+.about .heading span {
+    font-size: 40px;
+    font-weight: 200;
+    color: white;
+}
+
+.about .body {
+    height: 85px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    gap: 50px;
+}
+
+.about .body span {
+    text-align: center;
+    font-size: 20px;
+    width: 700px;
+    line-height: 1.5;
+}

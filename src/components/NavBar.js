@@ -1,6 +1,7 @@
 import "./NavBar.css"
 import logo from "../images/logo.png"; 
 import { GithubIcon, LinkedinIcon } from "../images/svgIcons";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
     return(
@@ -9,11 +10,11 @@ const NavBar = () => {
                 <img src={logo} alt="logo" className="logo"/>
             </div>
             <div className="center">
-                <span>Home</span>
-                <span>About</span>
-                <span>Sevices</span>
-                <span>Work</span>
-                <span>Contact</span>
+                <Link to="/"><span>Home</span></Link>
+                <Link to="/About"><span>About</span></Link>
+                <Link to="/Services"><span>Sevices</span></Link>
+                <Link to="/Work"><span>Work</span></Link>
+                <Link to="/Contact"><span>Contact</span></Link>
             </div>
             <div className="right">
                 <LinkedinIcon className="linkedin" onClick={() => window.open("https://www.linkedin.com/in/edward-yuabov/", "_blank")}/>
