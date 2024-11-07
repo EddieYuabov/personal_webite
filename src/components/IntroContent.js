@@ -11,6 +11,16 @@ const IntroContent = () => {
     const [isTransitioning, setIsTransitioning] = useState(false);
     const projects = [CarvoySS, OneUpWebsiteSS, GeneralAssemblySS];
 
+    const [loading, setLoading] = useState(true);
+    
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 600);
+    
+        return () => clearTimeout(timer);
+    }, []);
+
     const getPosition = (index) => {
         if (index === currentIndex) return 'active';
         if (index === (currentIndex - 1 + projects.length) % projects.length) return 'prev';
@@ -34,16 +44,17 @@ const IntroContent = () => {
 
     return(
         <div className="intro_content">
+        <div className="grid-bg"></div> 
+        {loading ? <Loading/> : null}
             <div className="top_content">
-                {/* <Loading/> */}
                 <div className="title">
-                    <span className="main">EDWARD YUABOV</span>
-                    <span className="description">WEB DEVELOPER & UX DESIGNER</span>
+                    <span className="main">web developer & ux designer.</span>
+                    <span className="description">edward yuabov</span>
                 </div>
             </div>
             <div className="bottom_content">
-                <div className="header">
-                    <span>Some of my latest work</span>
+                <div className="latest_work">
+                    <span>some of my latest work</span>
                 </div>
                 <div className="project_container">
                     {projects.map((project, index) => (

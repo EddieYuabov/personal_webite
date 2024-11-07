@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Loading from "../components/Loading"
-import "./About.css"
+import "./Services.css"
+import Loading from "../components/Loading";
 
-const About = () => {
+export const Services = () => {
     
     const [loading, setLoading] = useState(true);
     const [animate, setAnimate] = useState(false);
@@ -16,10 +16,12 @@ const About = () => {
     }, []);
 
     useEffect(() => {
+        // Set a timer to hide the loading screen after 2 seconds
         const timer = setTimeout(() => {
             setLoading(false);
         }, 600);
     
+        // Cleanup the timer on component unmount
         return () => clearTimeout(timer);
     }, []);
     return(
@@ -27,8 +29,8 @@ const About = () => {
         {loading ? <Loading/> : null}
     <div className="grid-bg"></div>
     <div className="top_content">
-        <span className={`header ${animate ? 'animate' : ''}`}>about.</span>
-        <p>learn a little about me</p>
+        <span className={`header ${animate ? 'animate' : ''}`}>services.</span>
+        <p>learn what I do</p>
     </div>
         <div className="content">
             
@@ -36,4 +38,5 @@ const About = () => {
     </div>
     )
 }
-export default About
+
+export default Services

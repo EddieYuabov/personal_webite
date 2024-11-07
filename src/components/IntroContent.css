@@ -1,5 +1,5 @@
 .intro_content {
-    height: 120vh;
+    /* height: 120vh; */
     background-color: rgb(17, 17, 24);
 }
 
@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     gap: 200px;
-    height: 50vh;
+    height: 40vh;
 }
 
 .title {
@@ -33,17 +33,19 @@
 /* bottom content */
 
 .bottom_content {
+    position: relative;
+
     height: 40vh;
 }
 
-.header {
+.bottom_content .latest_work {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.header::before,
-.header::after {
+.bottom_content .latest_work::before,
+.bottom_content .latest_work::after {
     content: "";
     display: flex;
     justify-content: center;
@@ -54,7 +56,7 @@
     margin: 0px 10px;
 }
 
-.header span {
+.latest_work span {
     color: white;
     font-size: 20px;
     font-weight: 200;
@@ -112,7 +114,7 @@
 /* Large screens */
 @media screen and (min-width: 1440px) {
     .project_container {
-        height: 560px;
+        height: 500px;
     }
 
     .project img {
@@ -143,7 +145,7 @@
 /* Extra large screens */
 @media screen and (min-width: 1920px) {
     .project_container {
-        height: 560px;
+        height: 530px;
     }
 
     .project img {
@@ -202,82 +204,59 @@
     }
 }
 
-/* Disable hover effect during transitions */
 .project.transitioning {
     pointer-events: none;
 }
 
-/* Prevent hover effect during transitions */
 .project.transitioning.active:hover {
     transform: translateX(0) translateZ(0) rotateY(0);
 }
 
-/* Navigation dots container */
 .navigation-dots {
+    position: relative;
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin-top: 30px;
+    z-index: 1;
 }
 
-/* Individual dot styling */
 .dot {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: background-color 0.3s ease;
 }
 
-/* Active dot styling */
 .dot.active {
     background-color: white;
-    transform: scale(1.2);
 }
 
-/* Optional: Hover effect for dots */
 .dot:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
 }
 
 .grid-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    /* Background color */
-    overflow: hidden;
-    z-index: 0;
-    /* Ensure it's behind other content */
-}
-
-.grid-bg::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: 80px;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 40vh;
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
     background-size: 20px 20px;
-    /* Size of the grid */
-    animation: move 20s linear infinite;
-    /* Animation for movement */
 }
 
-@keyframes move {
-    from {
-        background-position: 0 0;
-    }
-
-    to {
-        background-position: 0 20px;
-    }
-
-    /* Adjust for movement */
+.grid-bg::after {
+    content: '';
+    position: absolute;
+    top: 30vh;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background: linear-gradient(to top, rgb(17, 17, 24, 1), rgba(255, 255, 255, 0));
+    z-index: 10;
 }

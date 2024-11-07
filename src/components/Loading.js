@@ -19,14 +19,16 @@ const Loading = () => {
                     return shapes[nextIndex];
                 });
                 setIsVisible(true);
-            }, 200); 
-        }, 500);
+            }, ); 
+        }, 150);
 
         return () => clearInterval(intervalId);
     }, []);
 
     return(
-        <div className={`${currentClass} shape`} style={{ opacity: isVisible ? 1 : 0 }}></div>    
+        <div className="loading_container">
+            <div className={`${currentClass} shape`} style={{ opacity: isVisible ? 1 : 0 }}></div>    
+        </div>
     )
 }
 
