@@ -68,6 +68,12 @@
     z-index: -1;
 }
 
+.about .content {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
 .about .top_content p {
     font-size: 80px;
     color: white;
@@ -76,4 +82,92 @@
 
 .animate::after {
     transform: scaleX(1);
+}
+
+.about .experience {
+    color: white;
+    font-weight: 300;
+    justify-content: center;
+}
+
+.about .experience .text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+    margin: 0;
+}
+
+.about .experience .text span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 10px;
+    background-color: #24af95;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+    z-index: -1;
+    /* transform: scaleX(1); */
+}
+
+.about .experience .cell h2 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.about .experience .cell p {
+    color: #24af95;
+    margin: 0;
+    font-weight: 500;
+    font-size: 21px;
+}
+
+.about .experience .cell h3 {
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.about .experience .cell {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    background: rgb(27, 27, 40);
+    height: 160px;
+    width: 500px;
+    margin: 40px 80px;
+    font-size: 20px;
+    gap: 0px;
+    padding-left: 30px;
+    border-radius: 20px;
+    transition: 1s;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.about .experience .cell:hover p {
+    color: white;
+}
+
+.about .experience .cell::before {
+    content: "";
+    position: absolute;
+    height: 160px;
+    width: 100%;
+    background: linear-gradient(to right, #24af95, rgb(27, 27, 40));
+    transition: transform 400ms ease;
+    z-index: -1;
+    border-radius: 20px;
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.about .experience .cell:hover::before {
+    transform: translateX(0);
 }
