@@ -1,7 +1,7 @@
 import React from 'react';
 import "./NavBar.css";
 import logo from "../images/logo.png"; 
-import { GithubIcon, LinkedinIcon } from "../images/svgIcons";
+import { GithubIcon, InstagramIcon, LinkedinIcon, TikTokIcon } from "../images/svgIcons";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
@@ -20,6 +20,8 @@ const NavBar = () => {
             <div className="right">
                 <LinkedinIcon className="linkedin" onClick={() => window.open("https://www.linkedin.com/in/edward-yuabov/", "_blank")}/>
                 <GithubIcon className="github" onClick={() => window.open("https://github.com/EddieYuabov", "_blank")}/>
+                <InstagramIcon className="instagram" onClick={() => window.open("https://www.instagram.com/eddie.codes/", "_blank")}/>
+                <TikTokIcon className="tiktok" onClick={() => window.open("https://www.tiktok.com/@_eddie.codes", "_blank")}/>
             </div>
         </div>
     );

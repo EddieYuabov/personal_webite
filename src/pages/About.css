@@ -68,10 +68,11 @@
     z-index: -1;
 }
 
-.about .content {
+.about .resume {
     display: flex;
     justify-content: center;
     margin-top: 40px;
+    height: 60vh;
 }
 
 .about .top_content p {
@@ -90,27 +91,13 @@
     justify-content: center;
 }
 
-.about .experience .text {
+.about h2 {
     position: relative;
     display: flex;
+    color: white;
     justify-content: center;
     font-size: 70px;
     margin: 0;
-}
-
-.about .experience .text span::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0px;
-    width: 100%;
-    height: 10px;
-    background-color: #24af95;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s ease;
-    z-index: -1;
-    /* transform: scaleX(1); */
 }
 
 .about .experience .cell h2 {
@@ -132,12 +119,11 @@
 }
 
 .about .experience .cell {
+    display: flex;
     position: relative;
     overflow: hidden;
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     background: rgb(27, 27, 40);
     height: 160px;
     width: 500px;
@@ -146,28 +132,61 @@
     gap: 0px;
     padding-left: 30px;
     border-radius: 20px;
-    transition: 1s;
     z-index: 1;
     cursor: pointer;
 }
 
-.about .experience .cell:hover p {
-    color: white;
-}
+
 
 .about .experience .cell::before {
     content: "";
     position: absolute;
     height: 160px;
     width: 100%;
-    background: linear-gradient(to right, #24af95, rgb(27, 27, 40));
+    background: linear-gradient(to right, #24af95, #1b1b28);
+    left: 0px;
+    transform: translateX(-100%);
     transition: transform 400ms ease;
     z-index: -1;
-    border-radius: 20px;
-    left: 0;
-    transform: translateX(-100%);
 }
 
 .about .experience .cell:hover::before {
     transform: translateX(0);
+}
+
+.about .experience .cell:hover p {
+    color: white;
+}
+
+
+.about .skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.about .skills .cell {
+    color: white;
+    font-size: 20px;
+    background: rgb(27, 27, 40);
+    border-radius: 20px;
+    height: 225px;
+    width: 225px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.about .skills .cell .name {
+    position: absolute;
+    bottom: -50px;
+}
+
+.about .skills .cell .icon {
+    height: 100px;
+    width: 100px;
 }
